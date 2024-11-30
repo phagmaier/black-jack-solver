@@ -104,17 +104,7 @@ void set_21_payout(std::pair<int,int> &fraction){
   return;
 }
 
-std::string read_input() {
-    std::string input = "";
-    char ch;  // Use a char variable to hold one character at a time
-    while (std::cin.get(ch)) {  // Read one character at a time
-        if (ch == '\n') {
-            break;  // Stop reading when Enter key (newline) is pressed
-        }
-        input += ch;  // Append the character to the input string
-    }
-    return input;  // Return the collected input string
-}
+
 void get_dead_cards(std::unordered_map<int, int>& deck) {
     std::cout << "---------------------------\n";
     std::cout << "ENTER ANY OTHER DEAD CARDS\n";
@@ -122,105 +112,39 @@ void get_dead_cards(std::unordered_map<int, int>& deck) {
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     while (true) {
-        std::string input;
-        std::cout << "Enter the cards (or press Enter to skip): ";
-        
-        // Clear any previous errors and ignore leftover characters
-        //std::cin.clear();
-        //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        
-        // Read the entire line
-        std::getline(std::cin, input);
-        
-        // If no input is provided, exit
-        if (input.empty()) {
-            return;
-        }
+      std::string input;
+      std::cout << "Enter the cards (or press Enter to skip): ";
+      std::getline(std::cin, input);
+      
+      if (input.empty()) {
+        return;
+      }
 
-        // Stream to parse the input
-        std::istringstream ss(input);
-        std::string card;
-        std::vector<int> valid_cards;
-        bool invalid_input = false;
-        
-        // Validate each card
-        while (ss >> card) {
-            auto it = VAL_DIC.find(card);
-            if (it == VAL_DIC.end()) {
-                std::cout << "Invalid card: " << card << ". Please try again.\n";
-                invalid_input = true;  // flag invalid input
-                break;  // stop processing further cards if one is invalid
-            }
-            valid_cards.push_back(it->second);  // valid card found, add to vector
+      std::istringstream ss(input);
+      std::string card;
+      std::vector<int> valid_cards;
+      bool invalid_input = false;
+      
+      while (ss >> card) {
+        auto it = VAL_DIC.find(card);
+        if (it == VAL_DIC.end()) {
+          std::cout << "Invalid card: " << card << ". Please try again.\n";
+          invalid_input = true;  
+          break;  
         }
-
-        // If there was invalid input, restart the loop, asking for input again
-        if (invalid_input) {
-            continue;
-        }
-
-        // If all cards are valid, proceed with deletion
-        for (int card : valid_cards) {
-            std::cout << "DELETING " << card << "\n";
-            deck[card] -= 1;  // Decrease the card count
-        }
-
-        return;  // exit the function after processing the valid input
+        valid_cards.push_back(it->second);  
+      }
+      if (invalid_input) {
+        continue;
+      }
+      for (int card : valid_cards) {
+        std::cout << "DELETING " << card << "\n";
+        deck[card] -= 1;  
+      }
+      return; 
     }
 }
-/*
-void get_dead_cards(std::unordered_map<int, int>& deck) {
-    std::cout << "---------------------------\n";
-    std::cout << "ENTER ANY OTHER DEAD CARDS\n";
-    int count = 2; 
-    while (true) {
-        std::string input;
-        std::cout << "Enter the cards (or press Enter to skip): ";
-        
-        // Clear any previous errors and ignore leftover characters
-        //std::cin.clear();
-        //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        
-        // Read the input
-        input = read_input();
-        
-        // If no input is provided, exit
-        if (input.empty()) {
-            return;
-        }
 
-        // Stream to parse the input
-        std::istringstream ss(input);
-        std::string card;
-        std::vector<int> valid_cards;
-        bool invalid_input = false;
-        
-        // Validate each card
-        while (ss >> card) {
-            auto it = VAL_DIC.find(card);
-            if (it == VAL_DIC.end()) {
-                std::cout << "Invalid card: " << card << ". Please try again.\n";
-                invalid_input = true;  // flag invalid input
-                break;  // stop processing further cards if one is invalid
-            }
-            valid_cards.push_back(it->second);  // valid card found, add to vector
-        }
-
-        // If there was invalid input, restart the loop, asking for input again
-        if (invalid_input) {
-            continue;
-        }
-
-        // If all cards are valid, proceed with deletion
-        for (int card : valid_cards) {
-            std::cout << "DELETING " << card << "\n";
-            deck[card] -= 1;  // Decrease the card count
-        }
-
-        return;  // exit the function after processing the valid input
-    }
-}
-*/
 
 //Need to add something where if you want to you can also pick up up from after you've hit 
 //so you can burn extra cards

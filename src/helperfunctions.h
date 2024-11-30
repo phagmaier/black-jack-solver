@@ -25,7 +25,6 @@ void make_deck(std::unordered_map<int, int> &deck, int num_decks, std::pair<int,
 
 void set_21_payout(std::pair<int,int> &fraction);
 
-std::string read_input();
 
 void get_dead_cards(std::unordered_map<int,int> &deck);
 
