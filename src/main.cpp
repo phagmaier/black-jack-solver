@@ -2,7 +2,6 @@
 #include <utility>
 #include <unordered_map>
 #include "helperfunctions.h"
-#include "Player.h"
 
 
 int main(){
@@ -10,8 +9,7 @@ int main(){
   //std::pair<int,int> player;
   int dealer;
   std::pair<int,int> blackJackPayout;
-  Player player = Player(); 
-  start_game(deck,dealer, blackJackPayout, player);
+  start_game(deck,dealer, blackJackPayout);
  
   return 0;
 }

@@ -1,0 +1,1 @@
+/usr/bin/c++ -flto -Wl,--dependency-file,CMakeFiles/runme.dir/link.d CMakeFiles/runme.dir/src/main.cpp.o CMakeFiles/runme.dir/src/helperfunctions.cpp.o -o runme

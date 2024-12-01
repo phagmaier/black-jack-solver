@@ -18,6 +18,8 @@ const std::unordered_map<std::string,int> VAL_DIC = {
     {"q",12},{"Q",12}, {"k",13}, {"K",13}, {"a",1}, {"A",1}
   };
 
-const int NUM_CARDS = 52;
+//const int NUM_CARDS = 52;
+
+const int ITERATIONS = 1000000;
 
 #endif
