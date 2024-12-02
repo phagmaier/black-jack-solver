@@ -196,7 +196,6 @@ void get_dead_cards(std::unordered_map<int, int>& deck)
             std::cout << "DELETING " << card << "\n";
             deck[card] -= 1;
         }
-        return;
     }
 }
 
