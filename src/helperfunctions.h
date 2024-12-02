@@ -58,6 +58,8 @@ int hit(std::vector<int> &deck, int reg_sum, int ace_sum, bool ace, std::vector<
 
 std::unordered_map<int,int> simulation(std::unordered_map<int,int> &dic_deck, int dealer_card1, std::pair<int,int> &player);
 
+void print_cum_prob(std::unordered_map<int,float> &prcts);
+
 void start_game(std::unordered_map<int, int>& deck, int& dealer, std::pair<int, int>& payout);
 
 #endif

@@ -20,6 +20,6 @@ const std::unordered_map<std::string,int> VAL_DIC = {
 
 //const int NUM_CARDS = 52;
 
-const int ITERATIONS = 1000000;
+const int ITERATIONS = 5000000;
 
 #endif

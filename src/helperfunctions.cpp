@@ -1,27 +1,60 @@
 #include "helperfunctions.h"
 
 std::unordered_map<int, float> get_percentages(std::unordered_map<int, int>& prct){
+  std::cout << "------------------------------------------------------------------\n";
+  std::cout << "PERCENTAGES\n";
+  std::cout << "------------------------------------------------------------------\n";
+  static std::unordered_map<int,int> dic = {{-1,0},{17,1},{18,2},{19,3},{20,4},{21,5}};
+  float odds[6] = {0,0,0,0,0,0};
   std::unordered_map<int, float> results;
   float total = 0;
   for (auto& i : prct) {
     total += i.second;
-    std::cout << i.first << ": " << i.second << "\n";
+    //std::cout << i.first << ": " << i.second << "\n";
   }
+  float temp;
+  for (auto& [key,val] : prct) {
+    temp =  (float)val / total;
+    results[key] = temp;
+    odds[dic[key]] = temp * 100;
+  } 
+  
+  std::cout << "Chance the dealer BUSTS: " << odds[0] << "%\n";
+  std::cout << "------------------------------------------------------------------\n";
+  for (int i=17;i<22;++i){
+    std::cout << "CHACE the Dealer hits " << i << ": " << odds[dic[i]] << "%\n";
+    std::cout << "------------------------------------------------------------------\n";
+  } 
   std::cout << "\n";
-  for (auto& i : prct) {
-    results[i.first] = (float)i.second / total;
-    
-    if (i.first < 0) {
-      std::cout << "BUST: " << results[i.first] * 100 << "%\n";
-    } 
-    
-    else {
-      std::cout << i.first << ": " << results[i.first] *100 << "%\n";
-    }
-  }
-
   return results;
 }
+
+void print_cum_prob(std::unordered_map<int,float> &prcts){
+  float cum_prob = 0;
+  std::cout << "---------------------------------------\n";
+  std::cout << "CUMULATIVE RESULTS\n";
+  std::cout << "---------------------------------------\n";
+  float total = 0;
+  cum_prob += prcts[-1];
+  std::cout << "The chances of you winning if you just don't BUST: " << cum_prob *100 << "%\n";
+  std::cout << "------------------------------------------------------------------\n";
+  cum_prob += prcts[17];
+  std::cout << "The chances of you winning or pushing if you get to 17: " << cum_prob* 100 << "%\n";
+  std::cout << "------------------------------------------------------------------\n";
+  cum_prob += prcts[18];
+  std::cout << "The chances of you winning or pushing if you get to 18: " << cum_prob * 100 << "%\n";
+  std::cout << "------------------------------------------------------------------\n";
+  cum_prob += prcts[19];
+  std::cout << "The chances of you winning or pushing if you get to 19: " << cum_prob * 100 << "%\n";
+  std::cout << "------------------------------------------------------------------\n";
+  cum_prob += prcts[20];
+  std::cout << "The chances of you winning or pushing if you get to 20: " << cum_prob * 100 << "%\n";
+  std::cout << "------------------------------------------------------------------\n";
+  cum_prob += prcts[21];
+  std::cout << "The chances of you winning or pushing if you get to 21: " << cum_prob * 100 << "%\n";
+  std::cout << "------------------------------------------------------------------\n";
+}
+
 
 int get_num_decks()
 {
@@ -278,7 +311,7 @@ std::unordered_map<int,int> simulation(std::unordered_map<int,int> &dic_deck, in
   std::vector<int> deck = make_deck_vector(dic_deck);
   bool ace = dealer_card1 == 1 ? true : false;
   TRIPLE action;
-  for (int i=0; i< ITERATIONS; ++i){
+  for (int i=0; i < ITERATIONS; ++i){
     int dealer_sum = dealer_card1;
     int ace_dealer_sum = ace ? 11 : dealer_card1;
     std::vector<int> discarded;
@@ -309,7 +342,7 @@ void start_game(std::unordered_map<int, int>& deck, int& dealer, std::pair<int, 
   set_21_payout(payout);
   //p1.set_cards(player);
   get_dead_cards(deck);
-  std::unordered_map<int,int> results =  simulation(deck, dealer, player);
-  get_percentages(results);
-  
+  std::unordered_map<int,int> results = simulation(deck, dealer, player);
+  std::unordered_map<int,float> prcts = get_percentages(results);
+  print_cum_prob(prcts); 
 }
