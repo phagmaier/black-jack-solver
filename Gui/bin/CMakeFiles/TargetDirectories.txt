@@ -1,0 +1,3 @@
+/home/phagmaier/Desktop/Code/Blackjack/Gui/bin/CMakeFiles/runme.dir
+/home/phagmaier/Desktop/Code/Blackjack/Gui/bin/CMakeFiles/edit_cache.dir
+/home/phagmaier/Desktop/Code/Blackjack/Gui/bin/CMakeFiles/rebuild_cache.dir
