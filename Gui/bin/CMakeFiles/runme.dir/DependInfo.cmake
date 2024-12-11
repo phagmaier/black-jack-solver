@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/phagmaier/Desktop/Code/Blackjack/Gui/src/main.cpp" "CMakeFiles/runme.dir/src/main.cpp.o" "gcc" "CMakeFiles/runme.dir/src/main.cpp.o.d"
+  "/home/phagmaier/Desktop/Code/black-jack-solver/Gui/src/main.cpp" "CMakeFiles/runme.dir/src/main.cpp.o" "gcc" "CMakeFiles/runme.dir/src/main.cpp.o.d"
   "" "runme" "gcc" "CMakeFiles/runme.dir/link.d"
   )
 

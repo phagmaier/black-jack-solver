@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/phagmaier/Desktop/Code/Blackjack/Gui
+CMAKE_SOURCE_DIR = /home/phagmaier/Desktop/Code/black-jack-solver/Gui
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/phagmaier/Desktop/Code/Blackjack/Gui/bin
+CMAKE_BINARY_DIR = /home/phagmaier/Desktop/Code/black-jack-solver/Gui/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phagmaier/Desktop/Code/Blackjack/Gui/bin/CMakeFiles /home/phagmaier/Desktop/Code/Blackjack/Gui/bin//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phagmaier/Desktop/Code/black-jack-solver/Gui/bin/CMakeFiles /home/phagmaier/Desktop/Code/black-jack-solver/Gui/bin//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phagmaier/Desktop/Code/Blackjack/Gui/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phagmaier/Desktop/Code/black-jack-solver/Gui/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

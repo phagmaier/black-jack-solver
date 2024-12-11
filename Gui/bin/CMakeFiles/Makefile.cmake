@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/phagmaier/Desktop/Code/Blackjack/Gui/CMakeLists.txt"
+  "/home/phagmaier/Desktop/Code/black-jack-solver/Gui/CMakeLists.txt"
   "CMakeFiles/3.31.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.2/CMakeSystem.cmake"
   "/usr/lib/cmake/raylib/raylib-config-version.cmake"

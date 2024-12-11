@@ -1,4 +1,4 @@
-#include "raylib.h"
+#include <raylib.h>
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -22,24 +22,42 @@ const int SPACING = 5;
 //6. ALL DEAD DEALER CARDS that have already been taken (FORMATION FOR THIS IS CARD VAL,NUMBER)
 //7. FIN
 void all_done(int num_decks, std::pair<int,int> &player, int dealer, int *players_dead_cards, int *dealers_dead_cards){
-  std::ofstream outputFile("data.txt"); 
+  std::ofstream outputFile("../Data/data.txt"); 
   
   if (outputFile.is_open()) {
+    outputFile << "NUM DECKS\n";
+    outputFile << "----------------------------\n";
     outputFile << num_decks << "\n";
+    outputFile << "----------------------------\n";
+    outputFile << "PLYAER CARDS: \n";
+    outputFile << "----------------------------\n";
+    outputFile<< "FIRST CARD:\n";
     outputFile << player.first << "\n";
+    outputFile<< "SECOND CARD: \n";
     outputFile << player.second << "\n";
+    outputFile << "----------------------------\n";
+    outputFile << "----------------------------\n";
+    outputFile << "DEALERS CARDS: \n";
+    outputFile << "----------------------------\n";
     outputFile << dealer << "\n";
+    outputFile << "----------------------------\n";
+    outputFile << "DEAD CARDS PLAYER: \n";
+    outputFile << "----------------------------\n";
     for (int i = 0; i<NUM_CARDS;++i){
       if (players_dead_cards[i]){
-        outputFile << i << "," << players_dead_cards[i] << " ";
+        outputFile << i+1 << "," << players_dead_cards[i] << " ";
       }
     }
+    outputFile << "\n----------------------------\n";
+    outputFile << "DEAD CARDS OTHER PLAYERS: \n";
+    outputFile << "----------------------------\n";
     outputFile << "\n";
     for (int i = 0; i<NUM_CARDS;++i){
       if (dealers_dead_cards[i]){
-        outputFile << i << "," << dealers_dead_cards[i] << " ";
+        outputFile << i+1<< "," << dealers_dead_cards[i] << " ";
       }
     }
+    outputFile << "----------------------------\n";
     outputFile << "\n";
 
     outputFile.close();
@@ -402,7 +420,7 @@ int main(){
   init_dead_cards(dead_Recs1,dead_Recs2,counts1,counts2, dead_strs1, dead_strs2);
   Rectangle dead_done_rec = create_done_button();
   //contains both the card and the number of cards that are dead
-  std::vector<std::pair<int,int>> dead_cards;
+  //std::vector<std::pair<int,int>> dead_cards;
   
 
 
@@ -432,9 +450,11 @@ int main(){
         if (get_input){
           if (card_clicked.first == 0){
             get_num_cards(dead_strs1[card_clicked.second]);
+            counts1[card_clicked.second] = std::stoi(dead_strs1[card_clicked.second]);
           }
           else{
             get_num_cards(dead_strs2[card_clicked.second]);
+            counts2[card_clicked.second] = std::stoi(dead_strs2[card_clicked.second]);
           }
         }
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
@@ -444,8 +464,14 @@ int main(){
         BeginDrawing();
         ClearBackground(RAYWHITE);
         draw_dead_cards(dead_Recs1,dead_Recs2,font40, card_clicked,dead_strs1, dead_strs2);
+        draw_done_button(dead_done_rec, true, font40);
+
         EndDrawing();
       }
+      //int num_decks, std::pair<int,int> &player, int dealer, int *players_dead_cards, int *dealers_dead_cards){
+      std::pair<int,int> new_player = {player_hand.first%10+1,player_hand.second%10+1};
+      int new_dealer= dealer_hand%10+1;
+      all_done(std::stoi(num_decks_str),new_player,new_dealer,counts1,counts2);
       break;
     }
     
