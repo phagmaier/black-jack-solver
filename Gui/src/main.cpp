@@ -358,7 +358,6 @@ void get_num_cards(std::string &str) {
   if (key >= '0' && key <= '9' && str.size() < 3) {  
   if (str != "0"){
     str.push_back(static_cast<char>(key));         
-    std::cout << "Updated String: " << str << std::endl;
   }
   else{
     str = static_cast<char>(key);
