@@ -117,7 +117,6 @@ CMakeFiles/runme.dir/src/main.cpp.o: /home/phagmaier/Desktop/Code/black-jack-sol
   /usr/include/c++/14.2.1/bits/requires_hosted.h \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
-  /usr/include/c++/14.2.1/bits/stl_bvector.h \
   /usr/include/c++/14.2.1/bits/stl_construct.h \
   /usr/include/c++/14.2.1/bits/stl_function.h \
   /usr/include/c++/14.2.1/bits/stl_iterator.h \
@@ -125,8 +124,6 @@ CMakeFiles/runme.dir/src/main.cpp.o: /home/phagmaier/Desktop/Code/black-jack-sol
   /usr/include/c++/14.2.1/bits/stl_iterator_base_types.h \
   /usr/include/c++/14.2.1/bits/stl_pair.h \
   /usr/include/c++/14.2.1/bits/stl_relops.h \
-  /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
-  /usr/include/c++/14.2.1/bits/stl_vector.h \
   /usr/include/c++/14.2.1/bits/streambuf.tcc \
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
@@ -135,7 +132,6 @@ CMakeFiles/runme.dir/src/main.cpp.o: /home/phagmaier/Desktop/Code/black-jack-sol
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
   /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
   /usr/include/c++/14.2.1/bits/utility.h \
-  /usr/include/c++/14.2.1/bits/vector.tcc \
   /usr/include/c++/14.2.1/bits/version.h \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
@@ -174,7 +170,6 @@ CMakeFiles/runme.dir/src/main.cpp.o: /home/phagmaier/Desktop/Code/black-jack-sol
   /usr/include/c++/14.2.1/typeinfo \
   /usr/include/c++/14.2.1/unordered_map \
   /usr/include/c++/14.2.1/utility \
-  /usr/include/c++/14.2.1/vector \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
@@ -213,7 +208,7 @@ CMakeFiles/runme.dir/src/main.cpp.o: /home/phagmaier/Desktop/Code/black-jack-sol
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h
 
-runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
+runme: /tmp/ccZHW3Xn.ltrans0.ltrans.o \
   /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib/libc.so \
   /usr/lib/libgcc_s.so \
@@ -225,8 +220,6 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h:
 
 /usr/include/time.h:
-
-/tmp/cc9UTXoj.ltrans0.ltrans.o:
 
 /usr/include/sys/select.h:
 
@@ -320,12 +313,6 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 
 /usr/include/c++/14.2.1/bits/unordered_map.h:
 
-/usr/include/c++/14.2.1/bits/stringfwd.h:
-
-/usr/include/c++/14.2.1/bits/string_view.tcc:
-
-/usr/include/c++/14.2.1/bits/streambuf_iterator.h:
-
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
 /usr/include/c++/14.2.1/stdexcept:
@@ -354,6 +341,8 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 
 /usr/include/bits/types/locale_t.h:
 
+/usr/include/bits/types/cookie_io_functions_t.h:
+
 /usr/include/bits/sched.h:
 
 /usr/include/c++/14.2.1/bits/ios_base.h:
@@ -365,6 +354,8 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 /usr/include/bits/atomic_wide_counter.h:
 
 /usr/include/c++/14.2.1/bits/streambuf.tcc:
+
+/tmp/ccZHW3Xn.ltrans0.ltrans.o:
 
 /usr/include/bits/types/__locale_t.h:
 
@@ -456,8 +447,6 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 
 /usr/include/wchar.h:
 
-/usr/include/c++/14.2.1/vector:
-
 /usr/include/c++/14.2.1/bits/stl_relops.h:
 
 /usr/include/features.h:
@@ -521,8 +510,6 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 /usr/include/c++/14.2.1/bits/ostream.tcc:
 
 /usr/include/c++/14.2.1/cstddef:
-
-/usr/include/c++/14.2.1/bits/vector.tcc:
 
 /usr/include/bits/stdlib-bsearch.h:
 
@@ -638,7 +625,9 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 
 /usr/include/c++/14.2.1/bits/stl_algobase.h:
 
-/usr/include/c++/14.2.1/bits/stl_bvector.h:
+/usr/include/c++/14.2.1/bits/streambuf_iterator.h:
+
+/usr/include/c++/14.2.1/bits/string_view.tcc:
 
 /usr/include/bits/pthreadtypes.h:
 
@@ -646,8 +635,4 @@ runme: /tmp/cc9UTXoj.ltrans0.ltrans.o \
 
 /usr/include/c++/14.2.1/bits/stl_iterator_base_funcs.h:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/c++/14.2.1/bits/stl_uninitialized.h:
-
-/usr/include/c++/14.2.1/bits/stl_vector.h:
+/usr/include/c++/14.2.1/bits/stringfwd.h:

@@ -14,11 +14,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -march=native -flto -DNDEBUG")
 # Find raylib (required)
 find_package(raylib REQUIRED)
 
-# Add Source Files
-file(GLOB SOURCES src/*.cpp src/*.h)
-
 # Add Executable
-add_executable(runme ${SOURCES})
+add_executable(runme src/main.cpp)
 
 # Link raylib to the Executable
 target_link_libraries(runme PRIVATE raylib)

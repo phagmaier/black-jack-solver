@@ -1,5 +1,5 @@
-CMakeFiles/runme.dir/src/main.cpp.o: \
- /home/phagmaier/Desktop/Code/black-jack-solver/Gui/src/main.cpp \
+CMakeFiles/runme.dir/src/main2.cpp.o: \
+ /home/phagmaier/Desktop/Code/black-jack-solver/Gui/src/main2.cpp \
  /usr/include/stdc-predef.h /usr/include/raylib.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
  /usr/include/c++/14.2.1/iostream \
