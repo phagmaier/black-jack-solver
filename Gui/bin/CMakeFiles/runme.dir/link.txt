@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -march=native -flto -DNDEBUG -Wl,--dependency-file=CMakeFiles/runme.dir/link.d CMakeFiles/runme.dir/src/main.cpp.o -o runme  /usr/lib/libraylib.so -L/usr/lib -lraylib
+/usr/bin/c++  -O3 -march=native -flto -DNDEBUG -Wl,--dependency-file=CMakeFiles/runme.dir/link.d CMakeFiles/runme.dir/src/main.cpp.o CMakeFiles/runme.dir/src/Parser.cpp.o CMakeFiles/runme.dir/src/Gui.cpp.o -o runme  /usr/lib/libraylib.so -L/usr/lib -lraylib

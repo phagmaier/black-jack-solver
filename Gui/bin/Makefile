@@ -129,6 +129,54 @@ runme/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runme.dir/build.make CMakeFiles/runme.dir/build
 .PHONY : runme/fast
 
+src/Gui.o: src/Gui.cpp.o
+.PHONY : src/Gui.o
+
+# target to build an object file
+src/Gui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runme.dir/build.make CMakeFiles/runme.dir/src/Gui.cpp.o
+.PHONY : src/Gui.cpp.o
+
+src/Gui.i: src/Gui.cpp.i
+.PHONY : src/Gui.i
+
+# target to preprocess a source file
+src/Gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runme.dir/build.make CMakeFiles/runme.dir/src/Gui.cpp.i
+.PHONY : src/Gui.cpp.i
+
+src/Gui.s: src/Gui.cpp.s
+.PHONY : src/Gui.s
+
+# target to generate assembly for a file
+src/Gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runme.dir/build.make CMakeFiles/runme.dir/src/Gui.cpp.s
+.PHONY : src/Gui.cpp.s
+
+src/Parser.o: src/Parser.cpp.o
+.PHONY : src/Parser.o
+
+# target to build an object file
+src/Parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runme.dir/build.make CMakeFiles/runme.dir/src/Parser.cpp.o
+.PHONY : src/Parser.cpp.o
+
+src/Parser.i: src/Parser.cpp.i
+.PHONY : src/Parser.i
+
+# target to preprocess a source file
+src/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runme.dir/build.make CMakeFiles/runme.dir/src/Parser.cpp.i
+.PHONY : src/Parser.cpp.i
+
+src/Parser.s: src/Parser.cpp.s
+.PHONY : src/Parser.s
+
+# target to generate assembly for a file
+src/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runme.dir/build.make CMakeFiles/runme.dir/src/Parser.cpp.s
+.PHONY : src/Parser.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... runme"
+	@echo "... src/Gui.o"
+	@echo "... src/Gui.i"
+	@echo "... src/Gui.s"
+	@echo "... src/Parser.o"
+	@echo "... src/Parser.i"
+	@echo "... src/Parser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

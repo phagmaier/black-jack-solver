@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/runme.dir/link.d"
+  "CMakeFiles/runme.dir/src/Gui.cpp.o"
+  "CMakeFiles/runme.dir/src/Gui.cpp.o.d"
+  "CMakeFiles/runme.dir/src/Parser.cpp.o"
+  "CMakeFiles/runme.dir/src/Parser.cpp.o.d"
   "CMakeFiles/runme.dir/src/main.cpp.o"
   "CMakeFiles/runme.dir/src/main.cpp.o.d"
   "runme"

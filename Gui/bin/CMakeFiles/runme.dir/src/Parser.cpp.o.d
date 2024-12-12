@@ -1,5 +1,5 @@
-CMakeFiles/runme.dir/src/main.cpp.o: \
- /home/phagmaier/Desktop/Code/black-jack-solver/Gui/src/main.cpp \
+CMakeFiles/runme.dir/src/Parser.cpp.o: \
+ /home/phagmaier/Desktop/Code/black-jack-solver/Gui/src/Parser.cpp \
  /usr/include/stdc-predef.h \
  /home/phagmaier/Desktop/Code/black-jack-solver/Gui/src/Parser.h \
  /usr/include/c++/14.2.1/iostream \
@@ -156,6 +156,4 @@ CMakeFiles/runme.dir/src/main.cpp.o: \
  /usr/include/c++/14.2.1/ext/aligned_buffer.h \
  /usr/include/c++/14.2.1/bits/enable_special_members.h \
  /usr/include/c++/14.2.1/bits/node_handle.h \
- /usr/include/c++/14.2.1/bits/erase_if.h \
- /home/phagmaier/Desktop/Code/black-jack-solver/Gui/src/Gui.h \
- /usr/include/raylib.h
+ /usr/include/c++/14.2.1/bits/erase_if.h
